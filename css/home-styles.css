@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('/assets/fonts/HARRYP__.TTF');
+}
+
+* {
+  padding:0;
+  margin:0;
+  border:0
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #121315;
+  color: white;
+}
+
+h2, h3, h4 {
+  color: #F2CD1E;
+  font-family: 'Cinzel', serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+/*** Button ***/
+
+.button-wrapper, button {
+  background-color: #B4710C;
+  cursor: pointer;
+}
+
+.button-wrapper {
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.button-wrapper button {
+  padding: 10px 50px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.125rem;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  z-index: 2;
+}
+
+.button-wrapper .button-datail-left, .button-wrapper .button-datail-right {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  z-index: -1;
+}
+
+.button-wrapper .button-datail-left {
+  top: -1px;
+  left: -1px;
+}
+
+.button-wrapper .button-datail-right {
+  bottom: -1px;
+  right: -1px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/*** Navbar ***/
+
+.navbar {
+  padding: 10px 0;
+  background-color: #121315;
+  text-align: center;
+}
+
+.navbar ul li {
+  font-family: 'Cinzel', serif;
+  display: inline;
+  margin: 37.5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.navbar .nav-item {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo {
+  width: 30px;
+}
+
+/*** Header ***/
+
+.banner {
+  height: 850px;
+  text-align: right;
+  background: url('/assets/images/banner-home.png') #121315 no-repeat;
+  position: relative;
+}
+
+.banner-gradient-mask {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 1.54%, rgba(0, 0, 0, 0) 1.55%, rgba(0, 0, 0, 0.8) 98.85%);
+  position: absolute;
+}
+
+.banner h1 {
+  font-family: 'Harry Potter', fantasy;
+  font-size: 6rem;
+  font-weight: normal;
+  color: #F2CD1E;
+}
+
+.banner .container {
+  padding: 250px 0;
+  position: relative;
+}
+
+.banner p {
+  margin: 40px 0;
+  color: white;
+  line-height: 1.5rem;
+  max-width: 40%;
+  position: relative;
+  left: calc(100% - 40%);
+}
+
+/*** Section ***/
+
+.section {
+  margin: 80px auto;
+}
+
+.section .title-divider {
+  width: 130px;
+  border-top: 6px solid #B4710C;
+  margin: 40px 0;
+}
+
+.section h2 {
+  margin: 0;
+}
+
+.section .infos {
+  vertical-align: top;
+}
+
+.section .infos p {
+  line-height: 2rem;
+}
+
+.section .infos, .section .section-image {
+  width: 49%;
+  display: inline-block;
+}
+
+.section .section-image {
+  text-align: right;
+  position: relative;
+}
+
+.section .section-image img {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.section .section-image .image-frame {
+  width: 500px;
+  height: 600px;
+  border: 3px solid #B4710C;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.section .section-image .frame-detail {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: -5px;
+  right: -55px;
+}
+
+.section#section-books {
+  text-align: center;
+}
+
+.section#section-books p {
+  line-height: 2rem;
+  margin: 40px auto;
+  max-width: 60%;
+}
+
+.section#section-houses p {
+  line-height: 2rem;
+  margin: 40px auto;
+  max-width: 60%;
+  text-align: center;
+}
+
+.section#section-houses .infos {
+  writing-mode: vertical-lr;
+  width: 100%;
+}
+
+.section .title-divider-vertical {
+  background-color: #B4710C;
+  width: 8px;
+  height: 150px;
+  margin: 0 40px;
+}
+
+.section .houses {
+  writing-mode: horizontal-tb;
+  padding-top: 80px;
+  width: 100%;
+
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.section .houses .card {
+  background-color: #1D1F21;
+  border-radius:  15px;
+  width: 460px;
+  height: 460px;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  display: inline-block;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.section#section-houses .houses .card p {
+  margin: 35px 0;
+  max-width: 100%;
+  font-size: .875rem;
+
+  white-space: normal;
+}
+
+.section#section-houses .houses .card h3 {
+  margin-top: 35px;
+}
+
+.section#section-houses .houses .card img {
+  width: 150px;
+  position: absolute;
+  top: -80px;
+  display: block;
+  left: calc(50% - 70px);
+}
+
+.section#section-houses button {
+  padding: 10px 100px;
+  font-size: 1rem;
+}
+
+/*** Section Divider ***/
+
+
+.section-divider {
+  text-align: center;
+}
+
+.section-divider .section-divider-border {
+  width: 530px;
+  border-top: 1px solid #F2CD1E;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section-divider .divider-icon {
+  width: 45px;
+  margin: 0 30px;
+}
+
+/*** Card ***/
+
+.card .card-info {
+  margin-top: 100px;
+}
+
+.card#grifinoria .button-wrapper, .card#grifinoria .button-wrapper button {
+  background-color: #901212;
+}
+
+.card#sonserina .button-wrapper, .card#sonserina .button-wrapper button {
+  background-color: #066D22;
+}
+
+.card#corvinal .button-wrapper, .card#corvinal .button-wrapper button {
+  background-color: #00A3FF;
+}
+
+.card#lufa-lufa .button-wrapper, .card#lufa-lufa .button-wrapper button {
+  background-color: #c79b00;
+}
+
+/*** Table ***/
+
+table {
+  background-color: #1D1F21;
+  border-radius: 15px;
+  box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+
+  width: 100%;
+}
+
+td, th {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+th { 
+  font-family: 'Cinzel', serif;
+  font-weight: normal;
+  font-size: 1.125rem;
+  color: #F2CD1E;
+}
+
+tr {
+  font-size: .875rem;
+}
+
+/*** Footer ***/
+
+footer {
+  min-height: 420px;
+  background: url(/assets/images/footer-image.png) #0c0c0c no-repeat;
+  background-size: 100%;
+  background-blend-mode: overlay;
+  position: relative;
+}
+
+.footer-list, .footer-logo {
+  display: inline-block;
+}
+
+.footer-links {
+  padding: 80px 0 40px 0;
+}
+
+.footer-list {
+  text-align: left;
+  width: 33.33%;
+  vertical-align: top;
+}
+
+.footer-list h3 {
+  margin-bottom: 32px;
+}
+
+.footer-list ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+
+.footer-list ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-logo h1 {
+  font-family: 'Harry Potter', fantasy;
+  font-weight: normal;
+  color: #F2CD1E;
+  font-size: 5rem;
+  text-align: right;
+}
+
+footer .research-source {
+  width: 100%;
+  text-align: center;
+  font-size: .875rem;
+  background-color: #121315;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .research-source a {
+  text-decoration: none;
+  color: #F2CD1EDE;
+}
+
+footer .icon {
+  width: 100%;
+  text-align: center;
+}
+
+footer .icon img {
+  width: 40px;
+}
+
+/*** Scrollbar ***/
+
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track - barra de progresso (fundo) */
+::-webkit-scrollbar-track {
+  background-color: #1D1F21;
+  border-radius: 10px;
+}
+ 
+/* Handle - barra de scroll */
+::-webkit-scrollbar-thumb {
+  background: #0B0C0D; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #1D1F21;
+}
