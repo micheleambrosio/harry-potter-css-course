@@ -1,130 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-@font-face {
-  font-family: 'Harry Potter';
-  src: url('/assets/fonts/HARRYP__.TTF');
-}
-
-* {
-  padding:0;
-  margin:0;
-  border:0
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  background-color: #121315;
-  color: white;
-}
-
-h2, h3, h4 {
-  font-family: 'Cinzel', serif;
-  font-weight: normal;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-.container {
-  max-width: 1440px;
-  margin: auto;
-}
-
-p {
-  line-height: 1.5rem;
-}
-
-/*** Button ***/
-
-.button-wrapper, button {
-  cursor: pointer;
-}
-
-.button-wrapper {
-  display: inline-block;
-  padding: 5px;
-  position: relative;
-  z-index: 2;
-}
-
-.button-wrapper button {
-  padding: 10px 80px;
-  font-family: 'Cinzel', serif;
-  font-size: 1.125rem;
-  color: white;
-  text-transform: uppercase;
-  border: 1px solid white;
-  z-index: 2;
-}
-
-.button-wrapper .button-datail-left, .button-wrapper .button-datail-right {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  position: absolute;
-  z-index: -1;
-}
-
-.button-wrapper .button-datail-left {
-  top: -1px;
-  left: -1px;
-}
-
-.button-wrapper .button-datail-right {
-  bottom: -1px;
-  right: -1px;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-/*** Navbar ***/
-
-.navbar {
-  padding: 10px 0;
-  background-color: #121315;
-  text-align: center;
-}
-
-.navbar ul li {
-  font-family: 'Cinzel', serif;
-  display: inline;
-  margin: 37.5px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.navbar .nav-item {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar .nav-item.active {
-  font-weight: bold;
-}
-
-.navbar .logo {
-  width: 30px;
-}
-
-/*** Header ***/
+/** Header / Banner **/
 
 .banner {
   height: 685px;
-  background: url('/assets/images/banner-houses.png') #121315 no-repeat;
+  background: url("/assets/images/banner-houses.png") #121315 no-repeat;
+  background-size: cover;
   background-blend-mode: overlay;
   padding: 80px 0;
 }
@@ -156,7 +36,7 @@ p {
 }
 
 .banner h1 {
-  font-family: 'Cinzel', serif;
+  font-family: Cinzel, serif;
   font-weight: normal;
   font-size: 5rem;
   margin-bottom: 40px;
@@ -176,20 +56,11 @@ p {
   margin-top: 40px;
 }
 
-/*** Card ***/
-
-.card {
-  background-color: black;
-  border-radius: 15px;
-  box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.25);
-  padding: 40px;
-}
-
-/*** Section ***/
+/* Section */
 
 .section {
-  margin-top: 80px;
   margin-bottom: 80px;
+  margin-top: 80px;
 }
 
 .section h2 {
@@ -207,37 +78,38 @@ p {
   padding: 95px 100px;
 }
 
-#selector-hat-quote .card .quote, #selector-hat-quote .card .selector-hat {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 #selector-hat-quote .card .quote {
   max-width: 59.5%;
   text-align: right;
   position: relative;
 }
 
-#selector-hat-quote .card .quote p {
-  font-size: 1.75rem;
-  line-height: 2.5rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-indent: 5rem;
-}
-
 #selector-hat-quote .card .selector-hat {
   width: 40%;
 }
 
+#selector-hat-quote .card .quote,
+#selector-hat-quote .card .selector-hat {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#selector-hat-quote .card .quote p {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  color: rgba(255, 255, 255, .6);
+  text-indent: 5rem;
+}
+
 #selector-hat-quote .card .quote .author {
-  font-family: 'Cinzel', serif;
+  font-family: Cinzel, serif;
   font-size: 1.25rem;
   margin-top: 20px;
   text-transform: uppercase;
 }
 
 #selector-hat-quote .card .quote .quote-icon {
-  font-family: 'Cinzel', serif;
+  font-family: Cinzel, serif;
   font-size: 16rem;
   position: absolute;
 }
@@ -248,63 +120,56 @@ p {
 }
 
 #selector-hat-quote .card .quote .quote-icon.right {
-  right: 0px;
+  right: 0;
 }
 
-#house-features .house-features-container {
+#section-house-features .house-features-container {
   text-align: center;
 }
 
-#house-features .house-features-container .card {
+#section-house-features .house-features-container .card {
   display: inline-block;
   margin-top: 40px;
   padding: 20px 40px;
   position: relative;
 }
 
-#house-features .house-features-container .card#ghost {
+#section-house-features .house-features-container .card#ghost {
   margin: 0 90px;
 }
 
-#house-features .house-features-container .card .feature {
-  font-family: 'Cinzel', serif;
+#section-house-features .house-features-container .card .feature {
+  font-family: Cinzel, serif;
   font-size: 1.125rem;
   text-transform: uppercase;
   margin-right: 8px;
 }
 
-#house-features .house-features-container .card .feature-value {
-  font-family: Roboto, sans-serif;
-}
-
-#house-features .house-features-container .card .icon {
+#section-house-features .house-features-container .card .icon {
   position: absolute;
   top: -30px;
   left: 0;
   width: 100%;
-  text-align: center;
 }
 
-#house-features .house-features-container .card .icon img {
+#section-house-features .house-features-container .card .icon img {
   width: 40px;
-  /* Ajustes para o emoji de Texugo */
   height: 40px;
   object-fit: contain;
   object-position: bottom;
 }
 
-#house-members .members {
+#section-house-members .members {
   margin-top: 80px;
   text-align: center;
 }
 
-#house-members .members .member-picture {
+#section-house-members .members .member-picture {
   display: inline-block;
-  margin: 0px 24px;
-  left: 10px;
+  margin: 0 24px;
 }
 
-#house-members .members .member-picture img {
+#section-house-members .members .member-picture img {
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -312,16 +177,16 @@ p {
   border: 1px solid;
 }
 
-#house-members .actions {
+#section-house-members .actions {
   text-align: center;
   margin-top: 80px;
 }
 
-#house-director {
+#section-house-director {
   text-align: center;
 }
 
-#house-director .infos {
+#section-house-director .infos {
   width: 50%;
   display: inline-block;
   text-align: left;
@@ -329,33 +194,33 @@ p {
   margin-right: 100px;
 }
 
-#house-director .infos h2 {
+#section-house-director .infos h2 {
   text-align: left;
 }
 
-#house-director .infos p {
+#section-house-director .infos p {
   line-height: 2rem;
 }
 
-#house-director .title-divider {
+#section-house-director .title-divider {
   width: 130px;
   border-top: 6px solid;
   margin: 40px 0;
 }
 
-#house-director .section-image {
+#section-house-director .section-image {
   width: 25%;
   display: inline-block;
   position: relative;
 }
 
-#house-director .section-image img {
+#section-house-director .section-image img {
   width: 350px;
   height: 440px;
   object-fit: cover;
 }
 
-#house-director .section-image .image-frame {
+#section-house-director .section-image .image-frame {
   border: 1px solid;
   position: absolute;
   width: 350px;
@@ -364,329 +229,175 @@ p {
   left: 15px;
 }
 
-/*** Section Divider ***/
+/* Card */
 
-.section-divider {
-  text-align: center;
+.card {
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 6px 8px 20px rgba(0, 0, 0, .25);
+  padding: 40px;
 }
 
-.section-divider .section-divider-border {
-  width: 530px;
-  border-top: 1px solid #F2CD1E;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.section-divider .divider-icon {
-  width: 45px;
-  margin: 0 30px;
-}
-
-/*** Footer ***/
-
-footer {
-  min-height: 420px;
-  background: url(/assets/images/footer-image.png) #0c0c0c no-repeat;
-  background-size: 100%;
-  background-blend-mode: overlay;
-  position: relative;
-}
-
-.footer-list, .footer-logo {
-  display: inline-block;
-}
-
-.footer-links {
-  padding: 80px 0 40px 0;
-}
-
-.footer-list {
-  text-align: left;
-  width: 33.33%;
-  vertical-align: top;
-}
-
-.footer-list h3 {
-  margin-bottom: 32px;
-}
-
-.footer-list ul li {
-  list-style: none;
-  line-height: 2rem;
-}
-
-.footer-list ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-logo h1 {
-  font-family: 'Harry Potter', fantasy;
-  font-weight: normal;
-  color: #F2CD1E;
-  font-size: 5rem;
-  text-align: right;
-}
-
-footer .research-source {
-  width: 100%;
-  text-align: center;
-  font-size: .875rem;
-  background-color: #121315;
-  padding: 12px 0;
-  position: absolute;
-  bottom: 0;
-}
-
-footer .research-source a {
-  text-decoration: none;
-  color: #F2CD1EDE;
-}
-
-footer .icon {
-  width: 100%;
-  text-align: center;
-}
-
-footer .icon img {
-  width: 40px;
-}
-
-/*** Scrollbar ***/
-
-/* width */
-::-webkit-scrollbar {
-  height: 10px;
-}
-
-/* Track - barra de progresso (fundo) */
-::-webkit-scrollbar-track {
-  background-color: #1D1F21;
-  border-radius: 10px;
-}
- 
-/* Handle - barra de scroll */
-::-webkit-scrollbar-thumb {
-  background: #0B0C0D; 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: #1D1F21;
-}
-
-/*** House Color - Gryffindor ***/
+/*******************************/
+/** House Color - Gryffindor **/
+/*****************************/
 
 #page-house-gryffindor {
-  background: linear-gradient(180deg, #121315 3.04%, #1B0909 90.21%);;
-}
-
-#page-house-gryffindor h1,
-#page-house-gryffindor h2,
-#page-house-gryffindor h3,
-#page-house-gryffindor .author,
-#page-house-gryffindor #selector-hat-quote .card .quote .author,
-#page-house-gryffindor .quote-icon,
-#page-house-gryffindor .feature {
-  color: #BF8328
-}
-
-#page-house-gryffindor .button-wrapper,
-#page-house-gryffindor button {
-  background-color: #901212;
+  background: linear-gradient(180deg, #121315 3.04%, #1B0909 90.21%);
 }
 
 #page-house-gryffindor .navbar .nav-item.active {
   color: red;
 }
 
-#page-house-gryffindor .banner .container .house-logo .circle-wrapper {
+#page-house-gryffindor .banner .container .house-logo .circle-wrapper,
+#page-house-gryffindor button {
   background-color: #901212;
+}
+
+#page-house-gryffindor h1,
+#page-house-gryffindor h2,
+#page-house-gryffindor h3,
+#page-house-gryffindor .author,
+#page-house-gryffindor #selector-hat-quote .card .quote p.author,
+#page-house-gryffindor .quote-icon,
+#page-house-gryffindor .feature {
+  color: #BF8328;
 }
 
 #page-house-gryffindor .card {
   background-color: #1E171A;
 }
 
-#page-house-gryffindor #house-director .title-divider {
-  border-color: #901212;
-}
-
-#page-house-gryffindor #house-members .member-picture img,
 #page-house-gryffindor .section-divider .section-divider-border,
-#page-house-gryffindor #house-director .section-image .image-frame {
+#page-house-gryffindor #section-house-members .member-picture img, 
+#page-house-gryffindor #section-house-director .section-image .image-frame {
   border-color: #B4710C;
 }
 
-/*** House Color - Slytherin ***/
+#page-house-gryffindor #section-house-director .title-divider {
+  border-color: #901212;
+}
+
+/******************************/
+/** House Color - Slytherin **/
+/****************************/
 
 #page-house-slytherin {
   background: linear-gradient(180deg, #121315 3.04%, #131812 90.21%);
-}
-
-#page-house-slytherin h1,
-#page-house-slytherin h2,
-#page-house-slytherin h3,
-#page-house-slytherin .author,
-#page-house-slytherin #selector-hat-quote .card .quote .author,
-#page-house-slytherin .quote-icon,
-#page-house-slytherin .feature {
-  color: #10CE44;
-}
-
-#page-house-slytherin .button-wrapper,
-#page-house-slytherin button {
-  background-color: #066D22;
 }
 
 #page-house-slytherin .navbar .nav-item.active {
   color: #10CE44;
 }
 
-#page-house-slytherin .banner .container .house-logo .circle-wrapper {
+#page-house-slytherin .banner .container .house-logo .circle-wrapper,
+#page-house-slytherin button {
   background-color: #066D22;
-}
-
-#page-house-slytherin .card {
-  background-color: #171E1A;
-}
-
-#page-house-slytherin #house-director .title-divider {
-  border-color: #9E9E9E;
-}
-
-#page-house-slytherin #house-members .member-picture img,
-#page-house-slytherin .section-divider .section-divider-border,
-#page-house-slytherin #house-director .section-image .image-frame {
-  border-color: #066D22;
-}
-
-/*** House Color - Slytherin ***/
-
-#page-house-slytherin {
-  background: linear-gradient(180deg, #121315 3.04%, #131812 90.21%);
 }
 
 #page-house-slytherin h1,
 #page-house-slytherin h2,
 #page-house-slytherin h3,
 #page-house-slytherin .author,
-#page-house-slytherin #selector-hat-quote .card .quote .author,
+#page-house-slytherin #selector-hat-quote .card .quote p.author,
 #page-house-slytherin .quote-icon,
 #page-house-slytherin .feature {
   color: #10CE44;
-}
-
-#page-house-slytherin .button-wrapper,
-#page-house-slytherin button {
-  background-color: #066D22;
-}
-
-#page-house-slytherin .navbar .nav-item.active {
-  color: #10CE44;
-}
-
-#page-house-slytherin .banner .container .house-logo .circle-wrapper {
-  background-color: #066D22;
 }
 
 #page-house-slytherin .card {
   background-color: #171E1A;
 }
 
-#page-house-slytherin #house-director .title-divider {
-  border-color: #9E9E9E;
-}
-
-#page-house-slytherin #house-members .member-picture img,
 #page-house-slytherin .section-divider .section-divider-border,
-#page-house-slytherin #house-director .section-image .image-frame {
+#page-house-slytherin #section-house-members .member-picture img, 
+#page-house-slytherin #section-house-director .section-image .image-frame {
   border-color: #066D22;
 }
 
-/*** House Color - Ravenclaw ***/
+#page-house-slytherin #section-house-director .title-divider {
+  border-color: #9E9E9E;
+}
+
+/******************************/
+/** House Color - Ravenclaw **/
+/****************************/
 
 #page-house-ravenclaw {
   background: linear-gradient(180deg, #121315 3.04%, #10171D 90.21%);
-}
-
-#page-house-ravenclaw h1,
-#page-house-ravenclaw h2,
-#page-house-ravenclaw h3,
-#page-house-ravenclaw .author,
-#page-house-ravenclaw #selector-hat-quote .card .quote .author,
-#page-house-ravenclaw .quote-icon,
-#page-house-ravenclaw .feature {
-  color: #00A3FF;
-}
-
-#page-house-ravenclaw .button-wrapper,
-#page-house-ravenclaw button {
-  background-color: #855C42;
 }
 
 #page-house-ravenclaw .navbar .nav-item.active {
   color: #00A3FF;
 }
 
-#page-house-ravenclaw .banner .container .house-logo .circle-wrapper {
+#page-house-ravenclaw .banner .container .house-logo .circle-wrapper,
+#page-house-ravenclaw button {
   background-color: #855C42;
+}
+
+#page-house-ravenclaw h1,
+#page-house-ravenclaw h2,
+#page-house-ravenclaw h3,
+#page-house-ravenclaw .author,
+#page-house-ravenclaw #selector-hat-quote .card .quote p.author,
+#page-house-ravenclaw .quote-icon,
+#page-house-ravenclaw .feature {
+  color: #00A3FF;
 }
 
 #page-house-ravenclaw .card {
   background-color: #17191E;
 }
 
-#page-house-ravenclaw #house-director .title-divider {
-  border-color: #855C42;
-}
-
-#page-house-ravenclaw #house-members .member-picture img,
 #page-house-ravenclaw .section-divider .section-divider-border,
-#page-house-ravenclaw #house-director .section-image .image-frame {
+#page-house-ravenclaw #section-house-members .member-picture img, 
+#page-house-ravenclaw #section-house-director .section-image .image-frame {
   border-color: #00A3FF;
 }
 
-/*** House Color - Hufflepuff ***/
+#page-house-ravenclaw #section-house-director .title-divider {
+  border-color: #855C42;
+}
+
+/******************************/
+/** House Color - Hufflepuff **/
+/****************************/
 
 #page-house-hufflepuff {
   background: linear-gradient(180deg, #121315 3.04%, #1D1B10 90.21%);
-}
-
-#page-house-hufflepuff h1,
-#page-house-hufflepuff h2,
-#page-house-hufflepuff h3,
-#page-house-hufflepuff .author,
-#page-house-hufflepuff #selector-hat-quote .card .quote .author,
-#page-house-hufflepuff .quote-icon,
-#page-house-hufflepuff .feature {
-  color: #EAB600;
-}
-
-#page-house-hufflepuff .button-wrapper,
-#page-house-hufflepuff button {
-  background-color: #EAB600;
 }
 
 #page-house-hufflepuff .navbar .nav-item.active {
   color: #EAB600;
 }
 
-#page-house-hufflepuff .banner .container .house-logo .circle-wrapper {
-  background-color: #EAB600;
+#page-house-hufflepuff .banner .container .house-logo .circle-wrapper,
+#page-house-hufflepuff button {
+  background-color: #EAB600
+}
+
+#page-house-hufflepuff h1,
+#page-house-hufflepuff h2,
+#page-house-hufflepuff h3,
+#page-house-hufflepuff .author,
+#page-house-hufflepuff #selector-hat-quote .card .quote p.author,
+#page-house-hufflepuff .quote-icon,
+#page-house-hufflepuff .feature {
+  color: #EAB600;
 }
 
 #page-house-hufflepuff .card {
   background-color: #1E1D17;
 }
 
-#page-house-hufflepuff #house-director .title-divider {
-  border-color: #EACC64;
-}
-
-#page-house-hufflepuff #house-members .member-picture img,
 #page-house-hufflepuff .section-divider .section-divider-border,
-#page-house-hufflepuff #house-director .section-image .image-frame {
+#page-house-hufflepuff #section-house-members .member-picture img, 
+#page-house-hufflepuff #section-house-director .section-image .image-frame {
   border-color: #EAB600;
 }
 
+#page-house-hufflepuff #section-house-director .title-divider {
+  border-color: #EACC64;
+}

@@ -1,0 +1,229 @@
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: "Harry Potter";
+  src: url("/assets/fonts/HARRYP__.TTF");
+}
+
+/** Reset CSS **/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  background-color: #121315;
+  color: white;
+}
+
+h2, h3, h4 {
+  font-family: Cinzel, serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/** Container **/
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+/** Navbar **/
+
+.navbar {
+  padding: 10px 0;
+  background-color: #121315;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar ul li {
+  font-family: Cinzel, serif;
+  display: inline;
+  margin: 37.5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.navbar .nav-item {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo {
+  width: 30px;
+}
+
+.navbar .nav-item.active {
+  font-weight: bold;
+}
+
+/** Button **/
+
+button {
+  cursor: pointer;
+  padding: 15px 5px;
+
+  font-family: Cinzel, serif;
+  font-size: 1.125rem;
+  color: white;
+  text-transform: uppercase;
+
+  background: #B4710C;
+}
+
+button span {
+  padding: 10px 50px;
+  border: 1px solid white;
+}
+
+.button-wrapper {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.button-wrapper .button-detail {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+
+  z-index: -1;
+}
+
+.button-detail.button-detail-left {
+  top: -2px;
+  left: -2px;
+}
+
+.button-detail.button-detail-right {
+  bottom: -2px;
+  right: -2px;
+}
+
+/** Section Divider **/
+
+.section-divider {
+  text-align: center;
+}
+
+.section-divider-border {
+  width: 530px;
+  border-top: 1px solid #F2CD1E;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section-divider .divider-icon {
+  width: 45px;
+  margin: 0 30px;
+}
+
+/** Footer **/
+
+footer {
+  min-height: 420px;
+  background: url("/assets/images/footer-image.png") #0c0c0c no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  position: relative;
+}
+
+.footer-list, .footer-logo {
+  display: inline-block;
+}
+
+.footer-links {
+  padding: 80px 0 40px 0;
+}
+
+.footer-list {
+  text-align: left;
+  width: calc(100% / 3);
+  vertical-align: top;
+}
+
+.footer-list h3 {
+  margin-bottom: 32px;
+}
+
+.footer-list ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+
+.footer-list ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-logo h1 {
+  font-family: 'Harry Potter', fantasy;
+  font-weight: normal;
+  color: #F2CD1E;
+  font-size: 5rem;
+  text-align: right;
+}
+
+footer .research-source {
+  width: 100%;
+  text-align: center;
+  font-size: .875rem;
+  background-color: #121315;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .research-source a {
+  text-decoration: none;
+  color: #F2CD1EDE;
+}
+
+footer .icon {
+  text-align: center;
+}
+
+footer .icon img {
+  width: 40px;
+}
+
+/** Scrollbar **/
+
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track - barra de progresso (fundo) */
+::webkit-scrollbar-track {
+  background-color: #1D1F21;
+  border-radius: 10px;
+}
+
+/* Handle - barra de scroll */
+::-webkit-scrollbar-thumb {
+  background: #0B0C0D;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #1D1F21;
+}
